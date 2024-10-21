@@ -15,4 +15,4 @@ RUN chmod +x /app/app.exe
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Especifica el comando para ejecutar tu aplicación .exe directamente
-CMD ["python", "./app.py"]
+CMD ["python", "./app.exe"]
