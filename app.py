@@ -4,9 +4,10 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'cpybk')))
 
-from cpybk import copybook
-from cpybk.field_group import FieldGroup
-from cpybk.field import Field
+from .cpybk import copybook
+from .cpybk.field_group import FieldGroup
+from .cpybk.field import Field
+
 from werkzeug.datastructures.file_storage import FileStorage
 from tempfile import _TemporaryFileWrapper
 
