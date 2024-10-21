@@ -2,7 +2,17 @@ from flask import Flask,jsonify , request
 import sys 
 import os
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Determina la ruta base según si se está ejecutando en un .exe o directamente como script Python
+if hasattr(sys, '_MEIPASS'):
+    base_path = sys._MEIPASS
+else:
+    base_path = os.path.abspath(".")
+
+# Ruta hacia la carpeta 'cpybk' dentro del ejecutable o del sistema de archivos
+cpybk_path = os.path.join(base_path, 'cpybk')
+
+# Agrega la ruta al sys.path para permitir la importación del módulo 'copybook'
+sys.path.append(cpybk_path)
 
 from cpybk import copybook
 from cpybk.field_group import FieldGroup
