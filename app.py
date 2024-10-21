@@ -1,4 +1,7 @@
 from flask import Flask,jsonify , request
+import sys 
+sys.path.append("..")
+
 from lib.cpybk import copybook
 from lib.cpybk.field_group import FieldGroup
 from lib.cpybk.field import Field
