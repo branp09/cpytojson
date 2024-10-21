@@ -2,11 +2,11 @@ from flask import Flask,jsonify , request
 import sys 
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'cpybk')))
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from .cpybk import copybook
-from .cpybk.field_group import FieldGroup
-from .cpybk.field import Field
+from cpybk import copybook
+from cpybk.field_group import FieldGroup
+from cpybk.field import Field
 
 from werkzeug.datastructures.file_storage import FileStorage
 from tempfile import _TemporaryFileWrapper
