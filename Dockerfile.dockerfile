@@ -5,14 +5,14 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copia el archivo ejecutable y otros archivos necesarios
-COPY app.py /app/app.exe
+COPY app.exe /app/app.exe
 COPY requirements.txt ./
 
-# Asegura permisos de ejecución para app.py (si es necesario)
+# Asegura permisos de ejecución para el archivo ejecutable
 RUN chmod +x /app/app.exe
 
-# Instala las dependencias
+# No necesitas instalar dependencias si ya están incluidas en el .exe
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Especifica el comando para ejecutar tu aplicación con Python explícitamente
-CMD ["python", "./app.exe"]
+# Especifica el comando para ejecutar tu aplicación .exe directamente
+CMD ["./app.exe"]
