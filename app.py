@@ -2,9 +2,9 @@ from flask import Flask,jsonify , request
 import sys 
 sys.path.append("..")
 
-from lib.cpybk import copybook
-from lib.cpybk.field_group import FieldGroup
-from lib.cpybk.field import Field
+from cpybk import copybook
+from cpybk.field_group import FieldGroup
+from cpybk.field import Field
 from werkzeug.datastructures.file_storage import FileStorage
 from tempfile import _TemporaryFileWrapper
 
