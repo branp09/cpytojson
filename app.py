@@ -1,6 +1,6 @@
 from flask import Flask,jsonify , request
 import sys 
-sys.path.append("..")
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'cpybk')))
 
 from cpybk import copybook
 from cpybk.field_group import FieldGroup
