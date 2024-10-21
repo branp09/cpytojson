@@ -1,5 +1,7 @@
 from flask import Flask,jsonify , request
 import sys 
+import os
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'cpybk')))
 
 from cpybk import copybook
@@ -8,9 +10,7 @@ from cpybk.field import Field
 from werkzeug.datastructures.file_storage import FileStorage
 from tempfile import _TemporaryFileWrapper
 
-import os
 import tempfile
-import os
 import re
 
 app = Flask(__name__)
